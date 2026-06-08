@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "app/api/sensor-to-chain/route.js": {
+      "maxDuration": 30
+    }
+  }
+}

@@ -1,0 +1,37 @@
+# ================================================
+#  .github/workflows/cron.yml
+#  GitHub Actions — memanggil API Vercel setiap jam
+#  Gratis: 2000 menit Actions / bulan di free plan
+# ================================================
+
+name: Sensor to Blockchain (setiap jam)
+
+on:
+  schedule:
+    # Setiap jam tepat (UTC) — sesuaikan jika perlu
+    # Format: menit jam hari bulan hari-minggu
+    - cron: '0 * * * *'
+
+  # Tombol manual di GitHub (untuk testing)
+  workflow_dispatch:
+
+jobs:
+  kirim-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Panggil API Vercel sensor-to-chain
+        run: |
+          curl -f -X GET \
+            "${{ secrets.VERCEL_APP_URL }}/api/sensor-to-chain" \
+            -H "x-cron-secret: ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            --max-time 30
+
+      - name: Tampilkan hasil
+        if: success()
+        run: echo "✅ Data sensor berhasil dikirim ke blockchain!"
+
+      - name: Tampilkan error
+        if: failure()
+        run: echo "❌ Gagal kirim data. Cek logs di atas."
