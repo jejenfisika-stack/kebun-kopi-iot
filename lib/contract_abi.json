@@ -62,39 +62,6 @@
 	{
 		"inputs": [
 			{
-				"internalType": "string",
-				"name": "_cid",
-				"type": "string"
-			},
-			{
-				"internalType": "int256",
-				"name": "_suhu",
-				"type": "int256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_rh",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_tanah",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "_status",
-				"type": "string"
-			}
-		],
-		"name": "simpanLog",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
 				"internalType": "uint256",
 				"name": "index",
 				"type": "uint256"
@@ -239,6 +206,39 @@
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_cid",
+				"type": "string"
+			},
+			{
+				"internalType": "int256",
+				"name": "_suhu",
+				"type": "int256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_rh",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_tanah",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_status",
+				"type": "string"
+			}
+		],
+		"name": "simpanLog",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
