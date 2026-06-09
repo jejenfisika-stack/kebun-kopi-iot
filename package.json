@@ -1,0 +1,14 @@
+{
+  "name": "kebun-kopi-iot",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "ethers": "^6.11.1"
+  }
+}
